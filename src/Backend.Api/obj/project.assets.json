@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Koda\\minitasks\\minitask-asp-net\\src\\Backend.Api\\Backend.Api.csproj",
+      "projectUniqueName": "D:\\Koda\\minitasks\\minitask-asp-net\\backend\\src\\Backend.Api\\Backend.Api.csproj",
       "projectName": "Backend.Api",
-      "projectPath": "D:\\Koda\\minitasks\\minitask-asp-net\\src\\Backend.Api\\Backend.Api.csproj",
+      "projectPath": "D:\\Koda\\minitasks\\minitask-asp-net\\backend\\src\\Backend.Api\\Backend.Api.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\Koda\\minitasks\\minitask-asp-net\\src\\Backend.Api\\obj\\",
+      "outputPath": "D:\\Koda\\minitasks\\minitask-asp-net\\backend\\src\\Backend.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

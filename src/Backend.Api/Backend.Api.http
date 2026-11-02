@@ -13,12 +13,26 @@ POST {{baseUrl}}/api/v1/products
 Content-Type: application/json
 
 {
-  "productCode": "P002",
+  "productCode": "P003",
   "name": "Laptop",
   "price": 3500000,
   "stock": 24,
   "category": "Electronic"
 }
+
+### UPDATE PRODUCT
+PUT {{baseUrl}}/api/v1/products/P003
+Accept: application/json
+Content-Type: application/json
+
+{
+  "productCode": "P003",
+  "name": "Test",
+  "price": 3500000,
+  "stock": 24,
+  "category": "Electronic"
+}
+
 
 ### DELETE PRODUCT
 DELETE {{baseUrl}}/api/v1/products/P001

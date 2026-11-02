@@ -56,6 +56,29 @@ public sealed class ProductController : ControllerBase
     return CreatedAtAction(actionName: nameof(GetByCode), routeValues: new { productCode = newProduct.ProductCode }, value: ProductResponse.FromModel(newProduct));
   }
 
+  [HttpPut("{productCode}")]
+  [ProducesResponseType(typeof(ProductResponse), StatusCodes.Status200OK)]
+  [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+  public ActionResult<ProductResponse> UpdateProduct([FromRoute] string productCode, [FromBody] ProductRequest req)
+  {
+    try
+    {
+      var newProduct = new Product(req.ProductCode, req.Name, req.Price, req.Stock, req.Category);
+
+      _catalog.Update(productCode, newProduct);
+    }
+    catch (ArgumentNullException e)
+    {
+      return Problem(
+             statusCode: StatusCodes.Status404NotFound,
+             title: "Product not found",
+             detail: $"Error: {e}"
+           );
+    }
+
+    return Ok();
+  }
+
   [HttpDelete("{productCode}")]
   [ProducesResponseType(typeof(ProductResponse), StatusCodes.Status200OK)]
   [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
