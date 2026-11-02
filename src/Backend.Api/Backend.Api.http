@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:5126
+
+### GET ALL PRODUCTS
+GET {{baseUrl}}/api/v1/products
+Accept: application/json
+
+### GET PRODUCT BY CODE
+GET {{baseUrl}}/api/v1/products/P001
+Accept: application/json
+
+### CREATE NEW PRODUCT
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+
+{
+  "productCode": "P002",
+  "name": "Laptop",
+  "price": 3500000,
+  "stock": 24,
+  "category": "Electronic"
+}
+
+### DELETE PRODUCT
+DELETE {{baseUrl}}/api/v1/products/P001
+Accept: application/json
